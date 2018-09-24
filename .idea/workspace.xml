@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="f9c63cc6-fe3c-413b-b487-d4f97d8343e6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/views/turniirid.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/views/turniirid.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -68,40 +70,31 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="html" value="1" />
-          <entry key="js" value="2" />
+          <entry key="js" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="HTML" value="1" />
-          <entry key="JavaScript" value="2" />
+          <entry key="JavaScript" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="9" />
-          <entry key="js" value="54" />
+          <entry key="js" value="463" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="9" />
-          <entry key="JavaScript" value="54" />
+          <entry key="JavaScript" value="463" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="13" selection-start-column="13" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -111,47 +104,56 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+            <state relative-caret-position="34">
+              <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/views/index.html">
+        <entry file="file://$PROJECT_DIR$/../../../mongo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="39" column="25" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
+            <state relative-caret-position="51">
+              <caret line="3" column="42" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../../../mongo_connect_try.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="43" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/views/dashboard.html">
+        <entry file="file://$PROJECT_DIR$/../../../mongo_create_collection.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="986">
-              <caret line="58" column="44" selection-start-line="58" selection-start-column="44" selection-end-line="58" selection-end-column="44" />
+            <state relative-caret-position="34">
+              <caret line="2" lean-forward="true" selection-start-line="1" selection-start-column="36" selection-end-line="2" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/views/turniirid.html">
+        <entry file="file://$PROJECT_DIR$/../../../mongo_create_insertion.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1428">
-              <caret line="84" lean-forward="true" selection-start-line="84" selection-end-line="84" />
+            <state relative-caret-position="119">
+              <caret line="7" column="34" selection-start-line="7" selection-start-column="31" selection-end-line="10" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
+        <entry file="file://$PROJECT_DIR$/../../../mongo_find_insertion.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="850">
-              <caret line="50" column="26" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
+            <state relative-caret-position="412">
+              <caret line="42" column="2" selection-start-line="42" selection-start-column="2" selection-end-line="42" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -162,6 +164,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -177,7 +180,12 @@
         <option value="$PROJECT_DIR$/public/views/dashboard.html" />
         <option value="$PROJECT_DIR$/public/views/turniirid.html" />
         <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/../../../mongo.js" />
+        <option value="$PROJECT_DIR$/../../../mongo_create_collection.js" />
+        <option value="$PROJECT_DIR$/../../../mongo_create_insertion.js" />
+        <option value="$PROJECT_DIR$/../../../mongo_find_insertion.js" />
         <option value="$PROJECT_DIR$/routes/index.js" />
+        <option value="$PROJECT_DIR$/../../../mongo_connect_try.js" />
       </list>
     </option>
   </component>
@@ -197,7 +205,7 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-12" />
     <option name="y" value="-12" />
     <option name="width" value="966" />
@@ -274,6 +282,40 @@
       </list>
     </option>
   </component>
+  <component name="RunManager" selected="Node.js.mongo_connect_try.js">
+    <configuration name="mongo_connect_try.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="mongo_connect_try.js" working-dir="$PROJECT_DIR$/../../..">
+      <method v="2" />
+    </configuration>
+    <configuration name="mongo_create_collection.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="mongo_create_collection.js" working-dir="$PROJECT_DIR$/../../..">
+      <method v="2" />
+    </configuration>
+    <configuration name="mongo_create_insertion.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="mongo_create_insertion.js" working-dir="$PROJECT_DIR$/../../..">
+      <method v="2" />
+    </configuration>
+    <configuration name="mongo_find_insertion.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="mongo_find_insertion.js" working-dir="$PROJECT_DIR$/../../..">
+      <method v="2" />
+    </configuration>
+    <configuration name="mongo.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="mongo.js" working-dir="$PROJECT_DIR$/../../..">
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Node.js.bin\www" />
+      <item itemvalue="Node.js.mongo.js" />
+      <item itemvalue="Node.js.mongo_create_collection.js" />
+      <item itemvalue="Node.js.mongo_create_insertion.js" />
+      <item itemvalue="Node.js.mongo_find_insertion.js" />
+      <item itemvalue="Node.js.mongo_connect_try.js" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.mongo_connect_try.js" />
+        <item itemvalue="Node.js.mongo_find_insertion.js" />
+        <item itemvalue="Node.js.mongo_create_insertion.js" />
+        <item itemvalue="Node.js.mongo_create_collection.js" />
+        <item itemvalue="Node.js.mongo.js" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -287,24 +329,24 @@
       <workItem from="1536741936032" duration="363000" />
       <workItem from="1536911032248" duration="506000" />
       <workItem from="1536913503204" duration="1561000" />
-      <workItem from="1537438232962" duration="1266000" />
+      <workItem from="1537438232962" duration="6571000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12852000" />
+    <option name="totallyTimeSpent" value="18157000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16772655" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16772655" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3291815" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3291815" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -380,10 +422,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../../../mongo_find_insertion.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="42" column="2" selection-start-line="42" selection-start-column="2" selection-end-line="42" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../mongo_create_insertion.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="34" selection-start-line="7" selection-start-column="31" selection-end-line="10" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+        <state relative-caret-position="34">
+          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../mongo_create_collection.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" lean-forward="true" selection-start-line="1" selection-start-column="36" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../mongo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="42" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../mongo_connect_try.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="43" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
         </state>
       </provider>
     </entry>
