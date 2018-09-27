@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="268098409134-dlq9epg36n0img3onf3rhdj9v55190or.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+</head>
+<body>
+
+<div class="header">
+
+    <h1>EESTI TURNIIRIBRIDŽILIIT</h1>
+
+</div>
+
+<div class="navbar">
+    <div class="dropdown">
+        <button class="dropbtn">ETBL</button>
+        <div class="dropdown-content">
+            <a href="#">Põhikiri</a>
+            <a href="#">Juhatus</a>
+            <a href="#">Kontakt</a>
+        </div>
+    </div>
+    <a href="#calendar">Kalender</a>
+    <a href="#statistics">Statistika</a>
+    <a href="#news">Uudised</a>
+    <a href="#news">Lisa uudis</a>
+    <div class="dropdown">
+        <button class="dropbtn">Turniirid</button>
+        <div class="dropdown-content">
+            <a href="#">Turniir 1</a>
+            <a href="#">Turniir 2</a>
+            <a href="#">Turniir 3</a>
+        </div>
+    </div>
+</div>
+
+<form action="/routes/">
+    Pealkiri <input type="text" name="pealkiri"><br>
+    Uudis <input type="text" name="sisu"><br>
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>
