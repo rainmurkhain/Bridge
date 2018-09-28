@@ -30,16 +30,6 @@ const News = mongoose.model("News", newsSchema);
 router.get('/news', function(req, res, next) {
 
     News.find({}, (err, news) => {
-
-        news.forEach((news1) => {
-
-            News.findById(news._id).populate(authorId).
-
-        })
-
-    });
-
-    /*News.find({}, (err, news) => {
         let newsObjects = [];
 
         news.forEach((oneNews) => {
@@ -67,14 +57,8 @@ router.get('/news', function(req, res, next) {
         });
 
         res.send(newsObjects);
-        */
-        /*
-        Users.find({userId: news.body.authorId}, (err, author) => {
-            res.send(author.body.userName)
-        });
-        res.send(news.body.title);
-        res.send(news.body.news);
-        */
+
+
     });
 });
 
