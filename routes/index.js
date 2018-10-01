@@ -71,7 +71,7 @@ router.post("/lisa", (req, res) => {
 
     const mailOptions = {
         from: 'bridge.eesti@gmail.com',
-        to: req.body.emailAdd,
+        to: req.body.email,
         subject: 'Külastage uut bridzilehte!',
         text: 'Külastage meid aadressil bridge-ee.herokuapp.com'
     };
