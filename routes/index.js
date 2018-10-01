@@ -60,7 +60,7 @@ router.post("/addNews", (req, res) => {
         });
 });
 
-router.post("/sendMail", (req, res) => {
+router.get("/sendMail", (req, res) => {
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
