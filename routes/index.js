@@ -2,6 +2,8 @@ const express = require('express');
 const router = express.Router();
 const path = require('path');
 const mongoose = require("mongoose");
+const nodemailer = require('nodemailer');
+//const password = require('password');
 mongoose.Promise = global.Promise;
 mongoose.connect("mongodb+srv://Richard:R1chard!@cluster0-djbk6.mongodb.net/Bridge?retryWrites=true");
 const bodyParser = require("body-parser");
@@ -42,7 +44,7 @@ router.get('/', function(req, res, next) {
     res.sendFile(path.resolve('public/views/index.html'))
 });
 
-router.get('/add', function(req, res, next) {
+router.get('/lisa', function(req, res, next) {
     res.sendFile(path.resolve('public/views/lisa.html'))
 });
 
@@ -57,6 +59,34 @@ router.post("/addNews", (req, res) => {
             res.status(400).send("Unable to save to database");
         });
 });
+
+router.post("/lisa", (req, res) => {
+    const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+            user: 'bridge.eesti@gmail.com',
+            pass: 'R1chard!'
+        }
+    });
+
+    const mailOptions = {
+        from: 'bridge.eesti@gmail.com',
+        to: req.body.email,
+        subject: 'Külastage uut bridzilehte!',
+        text: 'Külastage meid aadressil bridge-ee.herokuapp.com'
+    };
+
+    transporter.sendMail(mailOptions, function(error, info){
+        if (error) {
+            console.log(error);
+        } else {
+            console.log('Email sent: ' + info.response);
+        }
+    });
+
+    res.redirect("/lisa");
+});
+
 
 
 
