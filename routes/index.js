@@ -84,7 +84,7 @@ router.post("/lisa", (req, res) => {
         }
     });
 
-    //res.redirect("/");
+    res.redirect("/lisa");
 });
 
 
