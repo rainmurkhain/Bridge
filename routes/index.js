@@ -3,7 +3,7 @@ const router = express.Router();
 const path = require('path');
 const mongoose = require("mongoose");
 const nodemailer = require('nodemailer');
-const password = require('password');
+//const password = require('password');
 mongoose.Promise = global.Promise;
 mongoose.connect("mongodb+srv://Richard:R1chard!@cluster0-djbk6.mongodb.net/Bridge?retryWrites=true");
 const bodyParser = require("body-parser");
@@ -65,7 +65,7 @@ router.post("/sendMail", (req, res) => {
         service: 'gmail',
         auth: {
             user: 'bridge.eesti@gmail.com',
-            pass: password.getPass()
+            pass: 'R1chard!'
         }
     });
 
