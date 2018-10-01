@@ -4,11 +4,15 @@ const path = require('path');
 const mongoose = require("mongoose");
 const nodemailer = require('nodemailer');
 //const password = require('password');
-mongoose.Promise = global.Promise;
-mongoose.connect("mongodb+srv://Richard:R1chard!@cluster0-djbk6.mongodb.net/Bridge?retryWrites=true");
 const bodyParser = require("body-parser");
 router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({extend: true}));
+mongoose.Promise = global.Promise;
+
+const db_user = process.env.DB_USER;
+const db_pass = process.env.DB_PASS;
+
+mongoose.connect("mongodb+srv:// " + db_user + ":" + db_pass + "!@cluster0-djbk6.mongodb.net/Bridge?retryWrites=true");
 
 const newsSchema = new mongoose.Schema({
     title: String,
@@ -61,28 +65,30 @@ router.post("/addNews", (req, res) => {
 });
 
 router.post("/lisa", (req, res) => {
-    const transporter = nodemailer.createTransport({
+
+    var transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: 'bridge.eesti@gmail.com',
-            pass: 'R1chard!'
+            user: process.env.USER,
+            pass: process.env.MAIL_PASS
         }
     });
 
-    const mailOptions = {
+    var mailOptions = {
         from: 'bridge.eesti@gmail.com',
         to: req.body.email,
         subject: 'Külastage uut bridzilehte!',
-        text: 'Külastage meid aadressil bridge-ee.herokuapp.com'
+        text: 'Sind on kutsutud külastama uut bridzilehte!'
     };
 
-    transporter.sendMail(mailOptions, function(error, info){
+    transporter.sendMail(mailOptions, function (err, inf) {
         if (error) {
-            console.log(error);
+            console.log(error)
         } else {
-            console.log('Email sent: ' + info.response);
+            console.log('Email sent: ' + inf.response)
         }
     });
+
 
     res.redirect("/lisa");
 });
