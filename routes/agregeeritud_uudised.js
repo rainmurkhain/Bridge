@@ -2,7 +2,7 @@ var sisu = document.getElementById("sisu");
 var nupp = document.getElementById("naita-koiki");
 
 nupp.onclick = function () {
-    if(sisu.className == "open"){
+    if(sisu.className === "open"){
         sisu.className = "";
         nupp.innerHTML = "Näita kõiki"
     }
