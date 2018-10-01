@@ -71,7 +71,7 @@ router.get("/sendMail", (req, res) => {
 
     const mailOptions = {
         from: 'bridge.eesti@gmail.com',
-        to: req.emailAdd,
+        to: req.body.emailAdd,
         subject: 'Külastage uut bridzilehte!',
         text: 'Külastage meid aadressil bridge-ee.herokuapp.com'
     };
@@ -83,6 +83,8 @@ router.get("/sendMail", (req, res) => {
             console.log('Email sent: ' + info.response);
         }
     });
+
+    res.sendFile(path.resolve('public/views/index.html'))
 });
 
 
