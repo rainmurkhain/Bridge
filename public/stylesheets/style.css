@@ -86,6 +86,27 @@ a {
     width: 75%;
     text-align: justify;
 }
+#sisu {
+    width: 100%;
+    text-align: justify;
+    overflow: hidden;
+    max-height: 470px;
+}
+
+#sisu.open{
+    max-height: 3000px;
+    /* max-height: 1000*/
+}
+
+#naita-koiki{
+    background: #0072CE;
+    color: #FFFFFF;
+    display: block;
+    width: 140px;
+    height: available;
+    text-align: center;
+}
+
 
 #news_and_login .news p {
     margin-right: 1em;
