@@ -60,7 +60,7 @@ router.post("/addNews", (req, res) => {
         });
 });
 
-router.get("/sendMail", (req, res) => {
+router.post("/lisa", (req, res) => {
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
@@ -84,7 +84,7 @@ router.get("/sendMail", (req, res) => {
         }
     });
 
-    res.sendFile(path.resolve('public/views/index.html'))
+    res.redirect("/lisa");
 });
 
 
