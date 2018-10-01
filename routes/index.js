@@ -12,7 +12,7 @@ mongoose.Promise = global.Promise;
 const db_user = process.env.DB_USER;
 const db_pass = process.env.DB_PASS;
 
-mongoose.connect("mongodb+srv:// " + db_user + ":" + db_pass + "!@cluster0-djbk6.mongodb.net/Bridge?retryWrites=true");
+mongoose.connect("mongodb+srv://" + db_user + ":" + db_pass + "@cluster0-djbk6.mongodb.net/Bridge?retryWrites=true");
 
 const newsSchema = new mongoose.Schema({
     title: String,
