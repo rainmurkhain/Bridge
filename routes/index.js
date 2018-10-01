@@ -44,7 +44,7 @@ router.get('/', function(req, res, next) {
     res.sendFile(path.resolve('public/views/index.html'))
 });
 
-router.get('/add', function(req, res, next) {
+router.get('/lisa', function(req, res, next) {
     res.sendFile(path.resolve('public/views/lisa.html'))
 });
 
@@ -84,7 +84,7 @@ router.post("/lisa", (req, res) => {
         }
     });
 
-    res.redirect("/lisa");
+    //res.redirect("/");
 });
 
 
