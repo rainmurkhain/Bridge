@@ -6,13 +6,13 @@ const nodemailer = require('nodemailer');
 //const password = require('password');
 const bodyParser = require("body-parser");
 router.use(bodyParser.json());
-router.use(bodyParser.urlencoded({extend: true}));
+router.use(bodyParser.urlencoded({extended: true}));
 mongoose.Promise = global.Promise;
 
 const db_user = process.env.DB_USER;
 const db_pass = process.env.DB_PASS;
 
-mongoose.connect("mongodb+srv://" + db_user + ":" + db_pass + "@cluster0-djbk6.mongodb.net/Bridge?retryWrites=true");
+mongoose.connect("mongodb+srv://" + db_user + ":" + db_pass + "@cluster0-djbk6.mongodb.net/Bridge?retryWrites=true", { useNewUrlParser: true });
 
 const newsSchema = new mongoose.Schema({
     title: String,
