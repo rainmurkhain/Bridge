@@ -49,26 +49,21 @@
         <div id = "sisu">
             <h3>Bridge.ee uuendamine</h3>
             <div>
+
                 <p>
+                    Siin on näha andmeid
 
-                <script type="text/javascript" src="../jquery/jquery1.js"></script>
+                <div id="ip">Loading...................</div>
+                <div id="country">Loading...................</div>
+                <div id="location">Loading...................</div>
+                <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
                 <script type="text/javascript">
-
-                    /*$(document).ready(function () {
-                        $.getJSON('http://smart-ip.net/geoip-json?callback=?', function(data) {
-                            $('p').html('My IP Address is: ' + data.host);
-                            document.write("My IP Address is: " + data.host)
-                        });
-                    });*/
-                    $(document).ready(function () {
-                        $.getJSON("http://jsonip.com/?callback=?", function (data) {
-                            console.log(data);
-                            alert(data.ip);
-                        });
-                    });
-
+                    $.get('https://ipinfo.io',function(response){
+                        $("#ip").html('IP aadress:<b>'+response.ip+'</b>');
+                        $("#country").html('Riik:<b>'+response.country+'</b>');
+                        $("#location").html('Asukoht:<b>'+response.location+'</b>');
+                    },'json');
                 </script>
-                </p>
             </div>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa doloremque eveniet fuga, hic illum impedit
                 maxime mollitia nihil officia perferendis quas qui quod reiciendis repellat sint soluta voluptas! Fugit,
