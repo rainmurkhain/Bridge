@@ -7,6 +7,11 @@ a {
   color: #00B7FF;
 }
 
+#map {
+    height: 400px;
+    width: 100%;
+}
+
 .header {
     background-color: #0072CE;
     padding: 16px 30px;
