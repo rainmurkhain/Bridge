@@ -52,6 +52,10 @@ router.get('/lisa', function(req, res, next) {
     res.sendFile(path.resolve('public/views/lisa.html'))
 });
 
+router.get('/meist', function(req, res, next) {
+    res.sendFile(path.resolve('public/views/meist.html'))
+});
+
 router.post("/addNews", (req, res) => {
 
     const myData = new News(req.body);
