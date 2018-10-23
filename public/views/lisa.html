@@ -41,10 +41,10 @@
     </div>
 </div>
 
-<form action="/addNews" method="post">
+<form action="/addNews" method="post" enctype="multipart/form-data" >
     Pealkiri <input type="text" name="title"><br>
     Uudis <input type="text" name="news"><br>
-    Pilt <input type="file" name="picture" accept="image/png, image/jpeg, image/JPG" multiple ><br>
+    Pilt <input type="file" name="picture" accept="image/png, image/jpeg, image/JPG, image/jpg" ><br>
     <input type="submit" value="Submit">
 </form>
 
