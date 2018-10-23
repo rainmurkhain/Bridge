@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="268098409134-dlq9epg36n0img3onf3rhdj9v55190or.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCS3QKiT6xMKypAOZh8nshKf2dlXLKSw9c&callback=initMap"></script>
+
+</head>
+<body>
+
+<div class="header">
+
+    <h1>EESTI TURNIIRIBRIDŽILIIT</h1>
+
+</div>
+
+<div class="navbar">
+    <div class="dropdown">
+        <button class="dropbtn">ETBL</button>
+        <div class="dropdown-content">
+            <a href="#">Põhikiri</a>
+            <a href="#">Juhatus</a>
+            <a href="#">Kontakt</a>
+        </div>
+    </div>
+    <a href="#calendar">Kalender</a>
+    <a href="#statistics">Statistika</a>
+    <a href="/news">Uudised</a>
+    <a href="/lisa">Lisa uudis</a>
+    <a href="/meist">Meist</a>
+    <div class="dropdown">
+        <button class="dropbtn">Turniirid</button>
+        <div class="dropdown-content">
+            <a href="#">Turniir 1</a>
+            <a href="#">Turniir 2</a>
+            <a href="#">Turniir 3</a>
+        </div>
+    </div>
+</div>
+
+<h3>Meie asukoht!</h3>
+<div id="map"></div>
+
+<script src="../scripts/map.js"></script>
+</body>
+
+</html>
