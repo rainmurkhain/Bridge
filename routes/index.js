@@ -140,8 +140,49 @@ router.post("/lisa", (req, res) => {
     res.redirect("/lisa");
 });
 
-
-
-
 module.exports = router;
 
+function callMessagesApi() {
+    var accessToken = oktaSignIn.tokenManager.get("accessToken");
+
+    if (!accessToken) {
+        return;
+    }
+
+    // Make the request using jQuery
+    $.ajax({
+        url: 'http://localhost:3000/api/messages',
+        headers: {
+            Authorization : 'Bearer ' + accessToken.accessToken
+        },
+        success: function(response) {
+            // Received messages!
+            console.log('Messages', response);
+        },
+        error: function(response) {
+            console.error(response);
+        }
+    });
+}
+
+const OktaJwtVerifier = require('@okta/jwt-verifier');
+
+const oktaJwtVerifier = new OktaJwtVerifier({
+    issuer: 'https://dev-598075.oktapreview.com/oauth2/default',
+    clientId: '0oah83rrgn2Ie6qfy0h7',
+    assertClaims: {
+        aud: 'api://default'
+    }
+});
+
+// The access token string, which should be obtained from the Authorization header on the request to your server
+const accessTokenString = 'eyJhbGciOiJSUzI1NiIsImtpZCI6Imk2UnRjSkxvbUg0e...';
+
+oktaJwtVerifier.verifyAccessToken(accessTokenString)
+    .then(jwt => {
+        // the token is valid
+        console.log(jwt.claims);
+    })
+    .catch(err => {
+        // a validation failed, inspect the error
+    });
