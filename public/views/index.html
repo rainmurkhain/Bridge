@@ -6,9 +6,9 @@
     <link rel="stylesheet" type="text/css" href="../stylesheets/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="google-signin-scope" content="profile email">
-    <meta name="google-signin-client_id" content="268098409134-dlq9epg36n0img3onf3rhdj9v55190or.apps.googleusercontent.com">
+    <meta name="google-signin-client_id"
+          content="268098409134-dlq9epg36n0img3onf3rhdj9v55190or.apps.googleusercontent.com">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
-
 
 
 </head>
@@ -16,7 +16,7 @@
 
 <div class="header">
 
-<h1>EESTI TURNIIRIBRIDŽILIIT</h1>
+    <h1>EESTI TURNIIRIBRIDŽILIIT</h1>
 
 </div>
 
@@ -37,9 +37,8 @@
     <div class="dropdown">
         <button class="dropbtn">Turniirid</button>
         <div class="dropdown-content">
-            <a href="#">Turniir 1</a>
-            <a href="#">Turniir 2</a>
-            <a href="#">Turniir 3</a>
+            <a href="/turniirid">Vaata turniire</a>
+            <a href="#">Registreeri</a>
         </div>
     </div>
 </div>
@@ -47,15 +46,19 @@
 <div id="news_and_login">
 
     <div class="news box">
-        <div id = "sisu">
+        <div id="sisu">
             <h3>Bridge.ee uuendamine</h3>
+            <button id="btn">Lae uudiseid</button>
+
             <div>
 
                 <div>
                     Siin on näha andmeid lehekülje külastajate kohta.
 
                     <p>
-                        <a href="http://bridge-ee.herokuapp.com" target="_blank" onclick="disable()"> <img src="http://www.cutercounter.com/hit.php?id=grafann&nd=5&style=38" border="0" alt="hit counter"></a>
+                        <a href="http://bridge-ee.herokuapp.com" target="_blank" onclick="disable()"> <img
+                                src="http://www.cutercounter.com/hit.php?id=grafann&nd=5&style=38" border="0"
+                                alt="hit counter"></a>
                     </p>
                 </div>
 
@@ -65,33 +68,66 @@
                 <div id="location">Loading...................</div>
                 <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
                 <script type="text/javascript">
-                    $.get('https://ipinfo.io',function(response){
-                        $("#ip").html('IP aadress:<b>'+response.ip+'</b>');
-                        $("#country").html('Riik:<b>'+response.country+'</b>');
-                        $("#location").html('Asukoht:<b>'+response.location+'</b>');
-                    },'json');
+                    $.get('https://ipinfo.io', function (response) {
+                        $("#ip").html('IP aadress:<b>' + response.ip + '</b>');
+                        $("#country").html('Riik:<b>' + response.country + '</b>');
+                        $("#location").html('Asukoht:<b>' + response.location + '</b>');
+                    }, 'json');
                 </script>
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa doloremque eveniet fuga, hic illum impedit
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa doloremque eveniet fuga, hic illum
+                impedit
                 maxime mollitia nihil officia perferendis quas qui quod reiciendis repellat sint soluta voluptas! Fugit,
-                officiis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad aliquam aut consectetur debitis dolorum ducimus ex illo ipsa iste magnam minus obcaecati quae repudiandae sint sit sunt, vel voluptatum.A ad assumenda, atque ea laboriosam magni minima minus molestias obcaecati odit quaerat quisquam reiciendis rerum suscipit totam unde voluptatum? Aliquam dicta error incidunt nihil pariatur! At modi quisquam tempore?Amet atque debitis doloribus earum enim eos explicabo id ipsum iste laudantium minima, molestias odit perspiciatis praesentium provident quaerat vero vitae? At dolor dolore enim, laudantium nesciunt sequi sint temporibus.Dolores earum enim hic molestias? Adipisci cumque delectus eius eos eveniet, inventore maiores nihil nostrum nulla odio odit provident rerum sequi, similique sunt suscipit totam voluptatum! Dolor sit sunt ullam.A aliquid amet aperiam corporis dicta dolor dolorem, ducimus ea error eveniet excepturi inventore iure iusto laudantium mollitia neque nihil odit pariatur praesentium quam quibusdam, quis ratione reprehenderit sapiente tempore?</p>
+                officiis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad aliquam aut
+                consectetur debitis dolorum ducimus ex illo ipsa iste magnam minus obcaecati quae repudiandae sint sit
+                sunt, vel voluptatum.A ad assumenda, atque ea laboriosam magni minima minus molestias obcaecati odit
+                quaerat quisquam reiciendis rerum suscipit totam unde voluptatum? Aliquam dicta error incidunt nihil
+                pariatur! At modi quisquam tempore?Amet atque debitis doloribus earum enim eos explicabo id ipsum iste
+                laudantium minima, molestias odit perspiciatis praesentium provident quaerat vero vitae? At dolor dolore
+                enim, laudantium nesciunt sequi sint temporibus.Dolores earum enim hic molestias? Adipisci cumque
+                delectus eius eos eveniet, inventore maiores nihil nostrum nulla odio odit provident rerum sequi,
+                similique sunt suscipit totam voluptatum! Dolor sit sunt ullam.A aliquid amet aperiam corporis dicta
+                dolor dolorem, ducimus ea error eveniet excepturi inventore iure iusto laudantium mollitia neque nihil
+                odit pariatur praesentium quam quibusdam, quis ratione reprehenderit sapiente tempore?</p>
             <h3>Mingi teine uudis, sama sisu tho</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa doloremque eveniet fuga, hic illum impedit
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa doloremque eveniet fuga, hic illum
+                impedit
                 maxime mollitia nihil officia perferendis quas qui quod reiciendis repellat sint soluta voluptas! Fugit,
-                officiis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad aliquam aut consectetur debitis dolorum ducimus ex illo ipsa iste magnam minus obcaecati quae repudiandae sint sit sunt, vel voluptatum.A ad assumenda, atque ea laboriosam magni minima minus molestias obcaecati odit quaerat quisquam reiciendis rerum suscipit totam unde voluptatum? Aliquam dicta error incidunt nihil pariatur! At modi quisquam tempore?Amet atque debitis doloribus earum enim eos explicabo id ipsum iste laudantium minima, molestias odit perspiciatis praesentium provident quaerat vero vitae? At dolor dolore enim, laudantium nesciunt sequi sint temporibus.Dolores earum enim hic molestias? Adipisci cumque delectus eius eos eveniet, inventore maiores nihil nostrum nulla odio odit provident rerum sequi, similique sunt suscipit totam voluptatum! Dolor sit sunt ullam.A aliquid amet aperiam corporis dicta dolor dolorem, ducimus ea error eveniet excepturi inventore iure iusto laudantium mollitia neque nihil odit pariatur praesentium quam quibusdam, quis ratione reprehenderit sapiente tempore?</p>
+                officiis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad aliquam aut
+                consectetur debitis dolorum ducimus ex illo ipsa iste magnam minus obcaecati quae repudiandae sint sit
+                sunt, vel voluptatum.A ad assumenda, atque ea laboriosam magni minima minus molestias obcaecati odit
+                quaerat quisquam reiciendis rerum suscipit totam unde voluptatum? Aliquam dicta error incidunt nihil
+                pariatur! At modi quisquam tempore?Amet atque debitis doloribus earum enim eos explicabo id ipsum iste
+                laudantium minima, molestias odit perspiciatis praesentium provident quaerat vero vitae? At dolor dolore
+                enim, laudantium nesciunt sequi sint temporibus.Dolores earum enim hic molestias? Adipisci cumque
+                delectus eius eos eveniet, inventore maiores nihil nostrum nulla odio odit provident rerum sequi,
+                similique sunt suscipit totam voluptatum! Dolor sit sunt ullam.A aliquid amet aperiam corporis dicta
+                dolor dolorem, ducimus ea error eveniet excepturi inventore iure iusto laudantium mollitia neque nihil
+                odit pariatur praesentium quam quibusdam, quis ratione reprehenderit sapiente tempore?</p>
             <h3>Mingi vanem uudis</h3>
-            <p>Lorem ipsum dolor sit amet, nisl etiam delicata ut nam, ne atomorum argumentum qui. Eripuit mentitum gubergren sea cu, odio eleifend comprehensam cu vim. Vix mnesarchum referrentur liberavisse ad, quo an choro utamur concludaturque. Ne alia commodo quo, mutat mucius tritani duo cu.
+            <p>Lorem ipsum dolor sit amet, nisl etiam delicata ut nam, ne atomorum argumentum qui. Eripuit mentitum
+                gubergren sea cu, odio eleifend comprehensam cu vim. Vix mnesarchum referrentur liberavisse ad, quo an
+                choro utamur concludaturque. Ne alia commodo quo, mutat mucius tritani duo cu.
 
-                Ad reque nusquam est, mei tempor democritum assueverit ne. Nec te propriae intellegat, quidam tibique recusabo ne vis. Te feugait convenire quo. Eam an putant nostrum assentior. Eam tollit ubique audiam id, laboramus constituto et vis.
+                Ad reque nusquam est, mei tempor democritum assueverit ne. Nec te propriae intellegat, quidam tibique
+                recusabo ne vis. Te feugait convenire quo. Eam an putant nostrum assentior. Eam tollit ubique audiam id,
+                laboramus constituto et vis.
 
-                Est no munere postulant, nec id noluisse delectus legendos. His cu essent feugiat alienum, ea diceret vivendum definiebas vim, ex vel falli debitis suscipit. Id vel ridens perpetua pertinacia, qui te voluptaria consequuntur. Mei iudico tempor mucius ne.
+                Est no munere postulant, nec id noluisse delectus legendos. His cu essent feugiat alienum, ea diceret
+                vivendum definiebas vim, ex vel falli debitis suscipit. Id vel ridens perpetua pertinacia, qui te
+                voluptaria consequuntur. Mei iudico tempor mucius ne.
 
-                Sit mazim suscipiantur cu, pro iriure perfecto cu. Invenire deterruisset mel ut, homero eligendi detraxit no his, accusam appareat mea ei. Eos te utroque impedit contentiones. Ius in dicunt lucilius disputando, partiendo consectetuer cu pri, nam illum possit adipisci ne. Sumo primis pro ea. Solum appareat efficiantur mei ut.
+                Sit mazim suscipiantur cu, pro iriure perfecto cu. Invenire deterruisset mel ut, homero eligendi
+                detraxit no his, accusam appareat mea ei. Eos te utroque impedit contentiones. Ius in dicunt lucilius
+                disputando, partiendo consectetuer cu pri, nam illum possit adipisci ne. Sumo primis pro ea. Solum
+                appareat efficiantur mei ut.
 
-                An usu animal accusata. Tritani mediocrem ea his, persius expetenda liberavisse ex sed. At qui mundi disputationi, ex modo falli dolores nam, vix nobis mandamus ea. Usu ex elitr maiorum.</p>
+                An usu animal accusata. Tritani mediocrem ea his, persius expetenda liberavisse ex sed. At qui mundi
+                disputationi, ex modo falli dolores nam, vix nobis mandamus ea. Usu ex elitr maiorum.</p>
 
 
         </div>
+        <!--
             <button id = "naita-koiki">Näita kõiki</button>
         <div>
 
@@ -99,7 +135,11 @@
             <script src = "../scripts/agregeeritud_uudised.js"> </script>
 
 
+        <div id="uudiste-info">
+        </div>
+        <script> src = "../scripts/news_read.js"</script>
 
+        -->
     </div>
 
     <div class="login box">
@@ -118,10 +158,9 @@
     <script src="../../routes/google_sisselogimine.js"></script>
 
     <a href="#" onclick="signOut();">Sign out</a>
-    <script src = "../../routes/google_valjalogimine.js"> </script>
+    <script src="../../routes/google_valjalogimine.js"></script>
 
 </div>
-
 
 
 </body>

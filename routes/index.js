@@ -19,7 +19,7 @@ var multer  = require('multer');
 
 var upload = multer({
     storage: multer.diskStorage({
-        destination: '/Images/newsPicture',
+        destination: './Images/newsPicture',
         filename: function (req, file, callback) {
             //TODO: tee filename skeem
             console.log("Olen siin: " + req.toString());
