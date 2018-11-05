@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>EESTI BRIDŽILIIDU LEHT (projekt)</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../stylesheets/style.css">
@@ -171,7 +172,7 @@
                         function success(res) {
                             // The tokens are returned in the order requested by `responseType` above
                             var accessToken = res[0];
-                            var idToken = res[1]
+                            var idToken = res[1];
 
                             // Say hello to the person who just signed in:
                             console.log('Hello, ' + idToken.claims.email);
@@ -212,7 +213,7 @@
             </script>
 
         </div>
-
+        <!--
         <form>
             <h3>Logi sisse:</h3>
             <label for="username" display="">Kasutajanimi:</label>
@@ -221,6 +222,7 @@
             <input type="password" title="password" id="password" placeholder="Parool">
             <input type="submit" value="Logi sisse">
         </form>
+        -->
     </div>
     <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
 
