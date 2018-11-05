@@ -111,7 +111,7 @@ router.post("/addNews", upload.single("picture"),  (req, res) => {
 
 
 
-router.post("/lisa", (req, res) => {
+router.post("/meist", (req, res) => {
 
     var transporter = nodemailer.createTransport({
         service: 'gmail',
@@ -137,7 +137,7 @@ router.post("/lisa", (req, res) => {
     });
 
 
-    res.redirect("/lisa");
+    res.redirect("/meist");
 });
 
 module.exports = router;
