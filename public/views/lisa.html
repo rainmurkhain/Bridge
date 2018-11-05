@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Lisa uudis, kutsu külalisi!</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../stylesheets/style.css">
@@ -50,8 +51,11 @@
 </form>
 
 <form method='post'>
-    Teavita sõpra uuest lahedast lehest!
-    <input type="email" name="email" placeholder='Sisesta email' required>
+    <div class="tooltip">Teavita sõpru meie uuest lehest!
+        <span class="tooltiptext">Ja võida eksklusiivne kaardipakk!</span>
+    </div>
+    <br>
+    <input type="email" name="email" placeholder='Sisesta email' required><br>
     <button id='button' type="submit">Saada kiri</button>
 </form>
 
