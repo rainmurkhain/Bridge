@@ -56,6 +56,7 @@ router.get('/news', function(req, res, next) {
 
     News.find({}, (err, news) => {
         res.send(news);
+        document.getElementById()
     });
 });
 
