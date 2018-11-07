@@ -177,7 +177,7 @@ const oktaJwtVerifier = new OktaJwtVerifier({
 
 // The access token string, which should be obtained from the Authorization header on the request to your server
 const accessTokenString = 'eyJhbGciOiJSUzI1NiIsImtpZCI6Imk2UnRjSkxvbUg0e...';
-
+/*
 oktaJwtVerifier.verifyAccessToken(accessTokenString)
     .then(jwt => {
         // the token is valid
@@ -186,3 +186,4 @@ oktaJwtVerifier.verifyAccessToken(accessTokenString)
     .catch(err => {
         // a validation failed, inspect the error
     });
+    */
