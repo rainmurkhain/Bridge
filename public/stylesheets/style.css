@@ -1,11 +1,12 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00B7FF;
+    color: #00B7FF;
 }
+
 
 #map {
     height: 400px;
@@ -21,65 +22,116 @@ a {
     color: #FFFFFF;
 }
 
-.navbar {
-  overflow: hidden;
-  background-color: #000000;
-  font-family: Arial, Helvetica, sans-serif;
+.navbar  {
+    overflow: hidden;
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.navbar a {
+    float: left;
+    height: max-content;
+    text-decoration: none;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+
 }
 
-.navbar a {
-  float: left;
-  font-size: 16px;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+a.lang {
+    height: 20px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
 }
 
 .dropdown {
-  float: left;
-  overflow: hidden;
+    float: left;
+    overflow: hidden;
+}
+
+.lang{
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
 }
 
 .dropdown .dropbtn {
-  font-size: 16px;
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
+    font-size: 16px;
+    border: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+
+}
+.dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
 }
 
+.dropdown .lang {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+
 .navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: #0072CE;
+    background-color: #0072CE;
+
 }
 
 .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
 }
 
 .dropdown-content a {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
 }
 
 .dropdown-content a:hover {
-  background-color: #ddd;
+    background-color: #ddd;
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
+.dropdown:hover .dropdown-content  {
+    display: block;
 }
 
 #news_and_login .box {
@@ -91,6 +143,7 @@ a {
     width: 65%;
     text-align: justify;
 }
+
 #sisu {
     width: 100%;
     text-align: justify;
@@ -98,12 +151,12 @@ a {
     max-height: 470px;
 }
 
-#sisu.open{
+#sisu.open {
     max-height: 3000px;
     /* max-height: 1000*/
 }
 
-#naita-koiki{
+#naita-koiki {
     background: #0072CE;
     color: #FFFFFF;
     display: block;
@@ -111,7 +164,6 @@ a {
     height: available;
     text-align: center;
 }
-
 
 #news_and_login .news p {
     margin-right: 1em;
@@ -127,14 +179,15 @@ a {
 }
 
 #news_and_login .login form {
-     width: 80%;
-     margin: auto;
+    width: 80%;
+    margin: auto;
 }
 
-#news_and_login .login form label{
+#news_and_login .login form label {
     display: none;
 }
-#news_and_login .login form input{
+
+#news_and_login .login form input {
     padding: 1em;
     margin-bottom: 1em;
     width: 80%;
@@ -193,4 +246,7 @@ TOOLTIP!
 .tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
+}
+h1.lang{
+    font-size: 30px;
 }

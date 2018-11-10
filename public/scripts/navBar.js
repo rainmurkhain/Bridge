@@ -2,24 +2,21 @@
 function writeHTMLasJS(){
     document.write("<div class=\"navbar\">");
     document.write("    <div class=\"dropdown\">");
-    document.write("        <button class=\"dropbtn\">ETBL<\/button>");
-    document.write("        <div class=\"dropdown-content\">");
-    document.write("            <a href=\"#\">Põhikiri<\/a>");
-    document.write("            <a href=\"#\">Juhatus<\/a>");
-    document.write("            <a href=\"#\">Kontakt<\/a>");
+    document.write("        <div class= \"dropbtn\">");
+    document.write("            <button class=\"lang\" key=\"lyhend\">ETBL<\/button>");
     document.write("        <\/div>");
+    document.write("                <div class=\"dropdown-content\">");
+    document.write("                    <a href=\"#\">Põhikiri<\/a>");
+    document.write("                    <a href=\"#\">Juhatus<\/a>");
+    document.write("                    <a href=\"#\">Kontakt<\/a>");
+    document.write("                <\/div>");
     document.write("    <\/div>");
-    document.write("    <a href=\"#calendar\">Kalender<\/a>");
-    document.write("    <a href=\"#statistics\">Statistika<\/a>");
-    document.write("    <a href=\"\/news\">Uudised<\/a>");
-    document.write("    <a href=\"\/lisa\">Lisa uudis<\/a>");
-    document.write("    <a href=\"\/meist\">Meist<\/a>");
-    document.write("    <div class=\"dropdown\">");
-    document.write("        <button class=\"dropbtn\">Turniirid<\/button>");
-    document.write("        <div class=\"dropdown-content\">");
-    document.write("            <a href=\"\/turniirid\">Vaata turniire<\/a>");
-    document.write("            <a href=\"#\">Registreeri<\/a>");
-    document.write("        <\/div>");
+    document.write("    <div class= \"dropbtn\">");
+    document.write("        <a href=\"#calendar\" class=\"lang\" key=\"calendar\">Kalender< \/a>");
+    document.write("        <a href=\"#statistics\" class=\"lang\" key=\"statistics\">Statistika<\/a>");
+    document.write("        <a href=\"\/news\" class=\"lang\" key=\"news\">Uudised<\/a>");
+    document.write("        <a href=\"\/lisa\" class=\"lang\" key=\"addnews\">Lisa uudis<\/a>");
+    document.write("        <a href=\"\/meist\" class=\"lang\" key=\"about\">Meist<\/a>");
     document.write("    <\/div>");
     document.write("<\/div>");
 }
