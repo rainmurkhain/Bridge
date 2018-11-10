@@ -92,6 +92,7 @@ router.get('/news', function(req, res, next) {
 
     News.find({}, (err, news) => {
         res.send(news);
+        document.getElementById()
     });
 });
 
@@ -205,4 +206,6 @@ router.post('/register', function(req, res, next) {
     })
 });
 
+
 module.exports = router;
+
