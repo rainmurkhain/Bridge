@@ -78,8 +78,8 @@ a.lang {
     background-color: inherit;
     font-family: inherit;
     margin: 0;
-
 }
+
 .dropbtn {
     font-size: 16px;
     border: none;
@@ -89,6 +89,10 @@ a.lang {
     background-color: inherit;
     font-family: inherit;
     margin: 0;
+}
+
+.right {
+    float:right;
 }
 
 .dropdown .lang {

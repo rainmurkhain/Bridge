@@ -7,6 +7,7 @@ const bodyParser = require("body-parser");
 const passport = require('passport');
 const Strategy = require('passport-local').Strategy;
 const User = require('../lib/User');
+const bcrypt = require('bcryptjs');
 
 mongoose.Promise = global.Promise;
 
@@ -17,7 +18,9 @@ passport.use(new Strategy(
             if (!user) {
                 return done(null, false, { message: 'Incorrect username.' });
             }
-            if (user.password != password) {
+            console.log("password is " + password);
+            console.log("user.password is " + user.password);
+            if (bcrypt.compareSync(password, user.password) === 'false') {
                 return done(null, false, { message: 'Incorrect password.' });
             }
             return done(null, user);
@@ -193,7 +196,7 @@ router.post('/register', function(req, res, next) {
 
     const newuser = new User();
     newuser.username = username;
-    newuser.password = password;
+    newuser.password = bcrypt.hashSync(password, bcrypt.genSaltSync(10));
     newuser.firstname = firstname;
     newuser.lastname = lastname;
 
@@ -202,7 +205,7 @@ router.post('/register', function(req, res, next) {
             console.log(err);
             return res.status(500).send();
         }
-        return res.status(200).send();
+        return res.status(200).redirect('/login');
     })
 });
 

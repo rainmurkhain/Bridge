@@ -1,5 +1,8 @@
 //<script type="text/javascript">
 function writeHTMLasJS(){
+    document.write("<div class=\"header\">");
+    document.write("<h1 class=\"lang\" key=\"home\"> EESTI TURNIIRIBRIDŽILIIT</h1>");
+    document.write("</div>");
     document.write("<div class=\"navbar\">");
     document.write("    <div class=\"dropdown\">");
     document.write("        <div class= \"dropbtn\">");
@@ -17,6 +20,9 @@ function writeHTMLasJS(){
     document.write("        <a href=\"\/news\" class=\"lang\" key=\"news\">Uudised<\/a>");
     document.write("        <a href=\"\/lisa\" class=\"lang\" key=\"addnews\">Lisa uudis<\/a>");
     document.write("        <a href=\"\/meist\" class=\"lang\" key=\"about\">Meist<\/a>");
+    document.write("        <div class=\"right\">");
+    document.write("        <a href=\"/login\" class=\"lang\">Logi sisse!</a>");
+    document.write("        <\/div>");
     document.write("    <\/div>");
     document.write("<\/div>");
 }
