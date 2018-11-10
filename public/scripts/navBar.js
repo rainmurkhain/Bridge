@@ -12,7 +12,7 @@ function writeHTMLasJS(){
     document.write("                <\/div>");
     document.write("    <\/div>");
     document.write("    <div class= \"dropbtn\">");
-    document.write("        <a href=\"#calendar\" class=\"lang\" key=\"calendar\">Kalender< \/a>");
+    document.write("        <a href=\"#calendar\" class=\"lang\" key=\"calendar\">Kalender<\/a>");
     document.write("        <a href=\"#statistics\" class=\"lang\" key=\"statistics\">Statistika<\/a>");
     document.write("        <a href=\"\/news\" class=\"lang\" key=\"news\">Uudised<\/a>");
     document.write("        <a href=\"\/lisa\" class=\"lang\" key=\"addnews\">Lisa uudis<\/a>");

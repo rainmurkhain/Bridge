@@ -34,6 +34,7 @@ $(function () {
         lang = $(this).attr('id');
         localStorage.setItem('language', lang);
         changeLanguage(lang);
+        alert("Vajutasid nupule");
     });
 
     function changeLanguage(lang) {
