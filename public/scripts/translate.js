@@ -27,17 +27,22 @@ let arrLang = {
 
 $(function () {
     let lang = localStorage.getItem('language');
+    alert("Vajutasid nupule onnju");
     changeLanguage(lang);
 
 
     $('.translate').click(function () {
+        alert("Vajutasid nupule");
         lang = $(this).attr('id');
         localStorage.setItem('language', lang);
         changeLanguage(lang);
-        alert("Vajutasid nupule");
+
     });
 
     function changeLanguage(lang) {
+        if (lang===null){
+            lang='et';
+        }
         $('.lang').each(function (index, element) {
             $(this).text(arrLang[lang][$(this).attr('key')]);
         });
