@@ -18,8 +18,6 @@ passport.use(new Strategy(
             if (!user) {
                 return done(null, false, { message: 'Incorrect username.' });
             }
-            console.log("password is " + password);
-            console.log("user.password is " + user.password);
             if (bcrypt.compareSync(password, user.password) === 'false') {
                 return done(null, false, { message: 'Incorrect password.' });
             }
