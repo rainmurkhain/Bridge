@@ -90,10 +90,8 @@ const newsSchema = new mongoose.Schema({
 const News = mongoose.model("News", newsSchema);
 
 router.get('/news', function(req, res, next) {
-
     News.find({}, (err, news) => {
         res.send(news);
-        document.getElementById()
     });
 });
 
