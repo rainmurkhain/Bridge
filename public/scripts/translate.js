@@ -34,10 +34,12 @@ $(function () {
         lang = $(this).attr('id');
         localStorage.setItem('language', lang);
         changeLanguage(lang);
-        //alert("Vajutasid nupule");
     });
 
     function changeLanguage(lang) {
+        if (lang===null){
+            lang='et';
+        }
         $('.lang').each(function (index, element) {
             $(this).text(arrLang[lang][$(this).attr('key')]);
         });
