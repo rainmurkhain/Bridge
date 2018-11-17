@@ -9,6 +9,10 @@ const Strategy = require('passport-local').Strategy;
 const User = require('../lib/User');
 const bcrypt = require('bcryptjs');
 
+var app = express()
+    , request = require('request');
+
+
 mongoose.Promise = global.Promise;
 
 passport.use(new Strategy(
@@ -59,6 +63,8 @@ router.get('/logout',
 });
 
 
+
+
 const db_user = process.env.DB_USER;
 const db_pass = process.env.DB_PASS;
 
@@ -89,10 +95,17 @@ const newsSchema = new mongoose.Schema({
 
 const News = mongoose.model("News", newsSchema);
 
-router.get('/news', function(req, res, next) {
+router.get('/newsJSON', function(req, res, next) {
     News.find({}, (err, news) => {
-        res.send(news);
+
+        res.json(JSON.stringify(news));
+
     });
+
+});
+
+router.get('/news', (req, res, next) => {
+    res.sendFile(path.resolve('public/views/news.html'));
 });
 
 
@@ -118,6 +131,8 @@ router.get('/login', (req, res) => {
 router.get('/register', function(req, res, next) {
     res.sendFile(path.resolve('public/views/register.html'))
 });
+
+
 
 router.post("/addNews", upload.single("picture"),  (req, res) => {
     //Teen eraldi fieldid ja siis panen kokku
@@ -205,6 +220,71 @@ router.post('/register', function(req, res, next) {
     })
 });
 
+const env = require('dotenv').config();
+
+//!!!!!!!!!!!!!!! Following variables need changing !!!!!!!!!!!!!!!!!!!!!!
+var clientId = process.env.AUTH_CLIENT_ID;
+var clientSecret = process.env.AUTH_SECRET;
+var redirect_uri = "https://bridge-ee.herokuapp.com";
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+var oauth2 = require('simple-oauth2')({
+    clientID: clientId,
+    clientSecret: clientSecret,
+    site: 'https://id.smartid.ee',
+    tokenPath: '/oauth/access_token',
+    authorizationPath: '/oauth/authorize'
+});
+
+// Authorization uri definition
+var authorization_uri = oauth2.authCode.authorizeURL({
+    redirect_uri: redirect_uri
+});
+
+
+//Make it possible to show the image
+app.use(express.static('public'));
+
+
+// Callback service parsing the authorization token and asking for the access token
+router.get('/smartid', function (req, res) {
+    var code = req.query.code;
+    var login = req.query.login;
+    console.log("***** " + code + ", " + login);
+    if (typeof code === 'undefined' && typeof login !== 'undefined') {
+        res.redirect(authorization_uri);
+        return;
+    } else if (typeof code !== 'undefined') {
+        oauth2.authCode.getToken({
+            code: code,
+            redirect_uri: redirect_uri
+        }, saveToken);
+    } else {
+        var url = req.protocol + '://' + req.get('host')
+        var pageHtml = '<strong>Click the image below to start login</strong><br>'
+            + '<a href="?login=true"><img src="'+url+'/eidas.jpg"></img></a>';
+        res.send(pageHtml);
+    }
+
+
+    function saveToken(error, result) {
+        if (error) {
+            console.log('Access Token Error', error.message);
+        }
+        console.log("Saving token");
+        token = oauth2.accessToken.create(result);
+        request({
+            url: 'https://id.smartid.ee/api/v2/user_data',
+            headers: {
+                "Authorization": "Bearer " + token.token.access_token
+            }
+
+        }, function (err, userResult) {
+            res.redirect('/');
+        });
+    }
+
+});
 
 module.exports = router;
 

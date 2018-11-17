@@ -12,9 +12,8 @@
     "connect-ensure-login": "^0.1.1",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
-    "dotenv": "^6.0.0",
+    "dotenv": "^6.1.0",
     "ejs": "^2.3.3",
-    "express": "^4.16.3",
     "express-session": "^1.11.3",
     "http-errors": "~1.6.2",
     "mongodb": "latest",
@@ -24,6 +23,12 @@
     "nodemailer": "^4.6.8",
     "passport": "^0.2.2",
     "passport-local": "^1.0.0",
-    "pug": "2.0.0-beta11"
+    "passport-oauth2": "^1.4.0",
+    "pug": "2.0.0-beta11",
+    "socket.io": "^2.1.1",
+    "socket.io-client": "^2.1.1",
+    "express": "^4.14.0",
+    "request": "^2.74.0",
+    "simple-oauth2": "^0.8.0"
   }
 }

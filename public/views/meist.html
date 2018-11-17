@@ -17,12 +17,6 @@
 </head>
 <body>
 
-<div class="header">
-
-    <h1>EESTI TURNIIRIBRIDŽILIIT</h1>
-
-</div>
-
 <script src="../scripts/navBar.js"></script>
 
 
@@ -40,6 +34,26 @@
     <input type="email" name="email" placeholder='Sisesta email' required><br>
     <button id='button' type="submit">Saada kiri</button>
 </form>
+
+
+<div>
+    Siin on näha andmeid lehekülje külastajate kohta.
+
+    <div id="ip">Loading...................</div>
+    <div id="country">Loading...................</div>
+    <div id="location">Loading...................</div>
+
+    <script type="text/javascript"
+            src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript">
+        $.get('https://ipinfo.io', function (response) {
+            $("#ip").html('IP aadress:<b>' + response.ip + '</b>');
+            $("#country").html('Riik:<b>' + response.country + '</b>');
+            $("#location").html('Asukoht:<b>' + response.location + '</b>');
+        }, 'json');
+    </script>
+
+</div>
 </body>
 
 </html>
