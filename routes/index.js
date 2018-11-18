@@ -11,12 +11,6 @@ const bcrypt = require('bcryptjs');
 
 var app = express(), request = require('request');
 
-var http = require('http').Server(app);
-var io = new require('socket.io')(http);
-
-io.on('connection', function(socket){
-    console.log('a user connected');
-});
 
 mongoose.Promise = global.Promise;
 
@@ -292,6 +286,7 @@ router.get('/smartid', function (req, res) {
     }
 
 });
+
 
 module.exports = router;
 
