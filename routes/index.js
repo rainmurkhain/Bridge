@@ -280,6 +280,8 @@ router.get('/smartid', function (req, res) {
             }
 
         }, function (err, userResult) {
+
+            //return res.status(200).json(token)
             res.redirect('/');
         });
     }
