@@ -9,9 +9,14 @@ const Strategy = require('passport-local').Strategy;
 const User = require('../lib/User');
 const bcrypt = require('bcryptjs');
 
-var app = express()
-    , request = require('request');
+var app = express(), request = require('request');
 
+var http = require('http').Server(app);
+var io = new require('socket.io')(http);
+
+io.on('connection', function(socket){
+    console.log('a user connected');
+});
 
 mongoose.Promise = global.Promise;
 
