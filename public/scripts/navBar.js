@@ -3,7 +3,7 @@ function writeHTMLasJS(){
     document.write("<div class=\"header\">");
     document.write("<h1 class=\"lang\" key=\"home\"> EESTI TURNIIRIBRIDŽILIIT</h1>");
     document.write("</div>");
-    document.write("<div class=\"navbar\">");
+    document.write("<div id=\"navbar\">");
     document.write("    <div class=\"dropdown\">");
     document.write("        <div class= \"dropbtn\">");
     document.write("            <button class=\"lang\" key=\"lyhend\">ETBL<\/button>");

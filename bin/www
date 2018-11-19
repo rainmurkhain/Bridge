@@ -92,12 +92,4 @@ function onListening() {
   debug('Listening on ' + bind);
 }
 
-
-io.on('connection', function(socket){
-    console.log("conneced!");
-    io.emit('chat message', "Hellooooooooooooooooooooo!");
-    console.log("Emit this shit");
-
-});
-
 module.exports = io;

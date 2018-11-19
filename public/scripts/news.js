@@ -36,11 +36,12 @@ fetch('/newsJSON')
         for (let i = 0; i < allNews.length; i++) {
             const div = document.createElement("div");
             div.style.width = "80%";
-            div.style.height = "100px";
+            div.style.margin = "25px 0";
+            div.style.padding = "10px 0";
             if (i % 2 === 0) div.style.background = "red";
             else div.style.background = "blue";
             div.style.color = "white";
-            div.innerHTML = allNews[i].news;
+            div.innerHTML = "<h2>" + allNews[i].title + "</h2><p>" + allNews[i].news + "</p>";
 
             document.body.appendChild(div);
         }
