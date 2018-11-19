@@ -8,7 +8,8 @@ let arrLang = {
         'news': 'News',
         'addnews': 'Add News',
         'about': 'About us',
-        'tournaments': 'Tournaments'
+        'tournaments': 'Tournaments',
+        'login': 'Sign in'
 
     },
 
@@ -20,7 +21,8 @@ let arrLang = {
         'news': 'Uudised',
         'addnews': 'Lisa uudis',
         'about': 'Meist',
-        'tournaments': 'Turniirid'
+        'tournaments': 'Turniirid',
+        'login': 'Logi sisse'
 
     }
 };

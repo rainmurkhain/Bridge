@@ -21,7 +21,7 @@ function writeHTMLasJS(){
     document.write("        <a href=\"\/lisa\" class=\"lang\" key=\"addnews\">Lisa uudis<\/a>");
     document.write("        <a href=\"\/meist\" class=\"lang\" key=\"about\">Meist<\/a>");
     document.write("        <div class=\"right\">");
-    document.write("        <a href=\"/login\" class=\"lang\">Logi sisse!</a>");
+    document.write("        <a href=\"/login\" class=\"lang\" key=\"login\">Logi sisse!</a>");
     document.write("        <\/div>");
     document.write("    <\/div>");
     document.write("<\/div>");
