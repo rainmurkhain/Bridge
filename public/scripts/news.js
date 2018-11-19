@@ -35,9 +35,10 @@ fetch('/newsJSON')
 
         for (let i = 0; i < allNews.length; i++) {
             const div = document.createElement("div");
-            div.style.width = "100px";
+            div.style.width = "80%";
             div.style.height = "100px";
-            div.style.background = "red";
+            if (i % 2 === 0) div.style.background = "red";
+            else div.style.background = "blue";
             div.style.color = "white";
             div.innerHTML = allNews[i].news;
 

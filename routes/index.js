@@ -134,17 +134,30 @@ router.get('/register', function(req, res, next) {
 
 
 router.post("/addNews", upload.single("picture"),  (req, res) => {
+
+    const io = require('../bin/www');
+
+    io.emit('new news');
+
     //Teen eraldi fieldid ja siis panen kokku
     let title = req.body.title;
     let body = req.body.news;
-    let pictureID = req.file.filename;
-    console.log("pildi ID: " + req.file.filename);
+    let pictureID = null;
+    let myData = null;
+    if (req.body.filename !== undefined) {
+        pictureID = req.body.filename;
+        myData = new News ({
+            title: title,
+            news: body,
+            pictureID: pictureID
+        });
+    } else {
+        myData = new News({
+            title: title,
+            news: body,
+        });
+    }
 
-    let myData = new News ({
-        title: title,
-        news: body,
-        pictureID: pictureID
-    });
     myData.save()
         .then(item => {
             res.sendFile(path.resolve('public/views/index.html'));
@@ -152,7 +165,8 @@ router.post("/addNews", upload.single("picture"),  (req, res) => {
         .catch(err => {
             res.status(400).send("Unable to save to database");
         });
-
+    /*
+    //kontrollib, kas fail tuli kaasa, aga see pole tegelikult vajalik hetkel
     if (!req.file) {
         console.log("No file received");
         return res.send({
@@ -165,6 +179,7 @@ router.post("/addNews", upload.single("picture"),  (req, res) => {
             success: true
         })
     }
+    */
 });
 
 

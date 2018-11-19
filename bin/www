@@ -99,3 +99,5 @@ io.on('connection', function(socket){
     console.log("Emit this shit");
 
 });
+
+module.exports = io;
