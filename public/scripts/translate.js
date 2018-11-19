@@ -1,4 +1,3 @@
-
 let arrLang = {
     en: {
         'home': 'ESTONIAN BRIDGE CLUB',
@@ -8,8 +7,9 @@ let arrLang = {
         'news': 'News',
         'addnews': 'Add News',
         'about': 'About us',
-        'tournaments': 'Tournaments'
-
+        'tournaments': 'Tournaments',
+        'lang': 'Eesti keel',
+        'login': 'Log in'
     },
 
     et: {
@@ -20,8 +20,9 @@ let arrLang = {
         'news': 'Uudised',
         'addnews': 'Lisa uudis',
         'about': 'Meist',
-        'tournaments': 'Turniirid'
-
+        'tournaments': 'Turniirid',
+        'lang': 'English',
+        'login': 'Logi sisse'
     }
 };
 
@@ -31,7 +32,11 @@ $(function () {
 
 
     $('.translate').click(function () {
-        lang = $(this).attr('id');
+        if (lang === 'et') {
+            lang = 'en';
+        } else {
+            lang = 'et';
+        }
         localStorage.setItem('language', lang);
         changeLanguage(lang);
     });
