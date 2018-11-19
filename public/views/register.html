@@ -8,13 +8,38 @@
 </head>
 <body>
     <script src=../scripts/navBar.js></script>
+
+    <h2>Registreeri kasutajaks</h2>
+
     <form method="post">
-        <input type="text" name="username" placeholder="Kasutajanimi" required>
-        <input type="password" name="password" placeholder="Parool" required>
-        <input type="text" name="firstname" placeholder="Eesnimi" required>
-        <input type="text" name="lastname" placeholder="Perenimi" required>
-        <input type="submit" value="Registreeru!">
+        <div class="imgcontainer">
+            <img src="http://nepeanseniorscentre.ca/wp-content/uploads/card-clubs-for-seniors.jpg" alt="Avatar" class="avatar">
+        </div>
+
+        <div class="container">
+
+            <input type="text" placeholder="Sisesta kasutajanimi" name="username" required>
+
+            <input type="password" placeholder="Sisesta parool" name="password" required>
+
+            <input type="text" placeholder="Sisesta eesnimi" name="firstname" required>
+
+            <input type="text" placeholder="Sisesta perenimi" name="lastname" required>
+
+            <button type="submit">Registreeri kasutajaks</button>
+
+
+        </div>
+
     </form>
+    <form action="/login">
+        <div class="container">
+            <button type="submit" class="other-button">Logi sisse</button>
+        </div>
+    </form>
+
+
+    <a href="/logout">Logi välja!</a>
 
 </body>
 </html>
