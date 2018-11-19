@@ -15,15 +15,6 @@ function writeHTMLasJS(){
     document.write("                    <a href=\"#\">Kontakt<\/a>");
     document.write("                <\/div>");
     document.write("    <\/div>");
-    document.write("    <div class=\"dropdown\">");
-    document.write("        <div class= \"dropbtn\">");
-    document.write("            <button class=\"lang\" key=\"keel\">Keel<\/button>");
-    document.write("        <\/div>");
-    document.write("                <div class=\"dropdown-content\">");
-    document.write("                    <a href=\"#\">Eesti keel<\/a>");
-    document.write("                    <a href=\"#\">English<\/a>");
-    document.write("                <\/div>");
-    document.write("    <\/div>");
     document.write("    <div class= \"dropbtn\">");
     document.write("        <a href=\"#calendar\" class=\"lang\" key=\"calendar\">Kalender<\/a>");
     document.write("        <a href=\"#statistics\" class=\"lang\" key=\"statistics\">Statistika<\/a>");
