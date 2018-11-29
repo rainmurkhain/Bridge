@@ -47,13 +47,7 @@
 
     <script type="text/javascript"
             src="https://code.jquery.com/jquery-latest.min.js"></script>
-    <script type="text/javascript">
-        $.get('https://ipinfo.io', function (response) {
-            $("#ip").html('IP aadress:<b>' + response.ip + '</b>');
-            $("#country").html('Riik:<b>' + response.country + '</b>');
-            $("#location").html('Asukoht:<b>' + response.location + '</b>');
-        }, 'json');
-    </script>
+    <script type="text/javascript" src="../../public/scripts/visitorData.js"></script>
 
 </div>
 </body>
