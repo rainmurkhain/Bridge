@@ -14,10 +14,11 @@ socket.on('new news', () => {
 
             const div = document.createElement("div");
             div.style.width = "80%";
-            div.style.height = "100px";
+            div.style.margin = "25px 0";
+            div.style.padding = "10px 0";
             div.style.background = "green";
             div.style.color = "white";
-            div.innerHTML = allNews[allNews.length - 1].news;
+            div.innerHTML = "<h2>" + allNews[allNews.length - 1].title + "</h2><p>" + allNews[allNews.length - 1].news + "</p>";
 
             document.body.appendChild(div);
 
