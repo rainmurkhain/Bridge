@@ -17,22 +17,19 @@
 
     <h2>Registreeri kasutajaks</h2>
 
-    <form method="post">
+    <form method="post" name="registerForm">
         <div class="imgcontainer">
             <img src="http://nepeanseniorscentre.ca/wp-content/uploads/card-clubs-for-seniors.jpg" alt="Avatar" class="avatar">
         </div>
 
         <div class="container">
 
-            <input type="text" placeholder="Sisesta kasutajanimi" name="username" required>
+            <input id="username" type="text" placeholder="Sisesta kasutajanimi" name="username" required>
+            <input id="password" type="password" placeholder="Sisesta parool" name="password" required>
+            <input id="firstname" type="text" placeholder="Sisesta eesnimi" name="firstname" required>
+            <input id="lastname" type="text" placeholder="Sisesta perenimi" name="lastname" required>
 
-            <input type="password" placeholder="Sisesta parool" name="password" required>
-
-            <input type="text" placeholder="Sisesta eesnimi" name="firstname" required>
-
-            <input type="text" placeholder="Sisesta perenimi" name="lastname" required>
-
-            <button type="submit">Registreeri kasutajaks</button>
+            <button id="register" type="submit">Registreeri kasutajaks</button>
 
 
         </div>
